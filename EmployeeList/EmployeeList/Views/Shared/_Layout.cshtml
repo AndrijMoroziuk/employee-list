@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html ng-app="employeelist">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title ng-bind="$state.current.data.pageTitle + ' - EmployeeList' || 'Employee list'"></title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <nav-bar-top></nav-bar-top>
+
+    <ui-view ng-show="!isLoading">
+        @RenderBody()
+    </ui-view>
+
+    <div class="global-message-box" id="GlobalMessageBox"></div>
+
+    <div ui-view="modal"></div>
+    <loading-component></loading-component>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/angular-components")
+    @Scripts.Render("~/bundles/angular")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

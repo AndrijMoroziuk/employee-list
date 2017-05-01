@@ -1,0 +1,78 @@
+﻿<div class="container">
+    <div>
+        <form ng-submit="addEmployeeForm.$valid && $ctrl.createEmployee(addEmployeeForm)" novalidate name="addEmployeeForm">
+
+            <div>
+                <div class="add-employee-block">
+                    <p class="input-title">First name:</p>
+                    <input type="text" name="firstName" placeholder="First name" ng-model="$ctrl.employee.firstName" class="add-employee-input form-control" ng-required="true" />
+                    <div ng-messages="addEmployeeForm.firstName.$error" ng-if="addEmployeeForm.firstName.$touched || addEmployeeForm.$submitted">
+                        <p class="error" ng-message="required">First name is required.</p>
+                    </div>
+                </div>
+
+                <div class="add-employee-block">
+                    <p class="input-title">Last name:</p>
+                    <input type="text" name="lastName" placeholder="Last name" ng-model="$ctrl.employee.lastName" class="add-employee-input form-control" ng-required="true"/>
+                    <div ng-messages="addEmployeeForm.lastName.$error" ng-if="addEmployeeForm.lastName.$touched || addEmployeeForm.$submitted" role="alert">
+                        <p class="error" ng-message="required">Last name is required.</p>
+                    </div>
+                </div>
+
+                <div class="add-employee-block">
+                    <p class="input-title">Employment date:</p>
+
+                    <p class="input-group add-employee-input">
+                        <input type="text"
+                               uib-datepicker-popup
+                               ng-model="$ctrl.employee.employmentDate"
+                               ng-click="$ctrl.openCalendar()"
+                               is-open="$ctrl.isOpenCalendar"
+                               ng-required="true"
+                               close-text="Close"
+                               datepicker-options="$ctrl.options"
+                               name="employmentDate"
+                               class="form-control"
+                               required 
+                               alt-input-formats="altInputFormats" />
+                        <span class="input-group-btn" ng-click="$ctrl.openCalendar()">
+                            <button type="button" class="btn btn-default" ng-click="open1()"><i class="glyphicon glyphicon-calendar"></i></button>
+                        </span>
+                    </p>
+                    <div ng-messages="addEmployeeForm.employmentDate.$error" ng-if="addEmployeeForm.employmentDate.$touched || addEmployeeForm.$submitted" role="alert">
+                        <p class="error" ng-message="required">Employment date is required.</p>
+                    </div>
+
+                    
+                </div>
+
+                <div class="add-employee-block">
+                    <p class="input-title">Rate:</p>
+                    <input type="number" name="rate" placeholder="Rate" ng-model="$ctrl.employee.rate" ng-required="true" class="add-employee-input form-control" />
+                    <div ng-messages="addEmployeeForm.rate.$error" ng-if="addEmployeeForm.rate.$touched || addEmployeeForm.$submitted">
+                        <p class="error" ng-message="required">Rate is required.</p>
+                    </div>
+                </div>
+
+                <div class="add-employee-block">
+                    <p class="input-title">Job title:</p>
+                    <select name="jobTitle" placeholder="Select job title" ng-required="true" ng-model="$ctrl.employee.jobTitle" class="add-employee-input form-control">
+                        <option value="CEO">CEO</option>
+                        <option value="Business Analyst">Business Analyst</option>
+                        <option value="Developer">Developer</option>
+                        <option value="QA">QA</option>
+                    </select>
+                    <div ng-messages="addEmployeeForm.jobTitle.$error" ng-if="addEmployeeForm.jobTitle.$touched || addEmployeeForm.$submitted">
+                        <p class="error" ng-message="required">Job title is required.</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <button type="button" ui-sref="employeeList" class="btn employee-btn">Back</button>
+                <button type="submit" class="btn employee-btn">
+                    Save
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+﻿<div class="container text-center">
+    <div class="col-md-6 col-lg-6 col-sm-12 login-block">
+        <h4>Login</h4>
+        <form ng-submit="$ctrl.login($ctrl.loginForm)">
+            <input ng-model="$ctrl.loginForm.email"
+                   type="email"
+                   placeholder="Email"
+                   name="email"
+                   class="login-input" />
+
+            <input ng-model="$ctrl.loginForm.password"
+                   type="password"
+                   placeholder="Password"
+                   name="password"
+                   class="login-input" />
+
+            <button type="submit" class="btn employee-btn">Log In</button>
+        </form>
+    </div>
+    <div class="col-md-6 col-lg-6 col-sm-12 login-block">
+        <h4>Register</h4>
+        <div>
+            <form ng-submit="$ctrl.register($ctrl.registerForm)">
+                <input ng-model="$ctrl.registerForm.email"
+                       type="email"
+                       placeholder="Email"
+                       name="email"
+                       class="login-input" />
+
+                <input ng-model="$ctrl.registerForm.password"
+                       type="password"
+                       placeholder="Password"
+                       name="password"
+                       class="login-input" />
+
+                <button type="submit" class="btn employee-btn">Sign up</button>
+            </form>
+        </div>
+    </div>
+</div>

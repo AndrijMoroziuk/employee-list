@@ -1,0 +1,25 @@
+﻿.navbar-site {
+    background-color: #6286EE;
+    height: 65px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    color: white;
+    z-index: 1030;
+    a {
+        color: white;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+}
+
+.navbar-content {
+    margin: 20px 30px;
+}
+
+.user-name-navbar {
+    display: inline-block;
+    margin-right: 25px;
+}

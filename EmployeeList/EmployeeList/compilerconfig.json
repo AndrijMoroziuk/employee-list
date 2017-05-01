@@ -1,0 +1,18 @@
+﻿[
+  {
+    "outputFile": "Content/sass/layout.css",
+    "inputFile": "Content/sass/layout.scss"
+  },
+  {
+    "outputFile": "Content/sass/navbartop.css",
+    "inputFile": "Content/sass/navbartop.scss"
+  },
+  {
+    "outputFile": "Content/sass/home.css",
+    "inputFile": "Content/sass/home.scss"
+  },
+  {
+    "outputFile": "Content/sass/dashboard.css",
+    "inputFile": "Content/sass/dashboard.scss"
+  }
+]

@@ -1,0 +1,12 @@
+﻿<div class="navbar-site">
+    <div class="navbar-content">
+        <div class="pull-left logo">Employee list</div>
+        <div ng-if="$ctrl.currentUserService.isAuthenticated()" class="pull-right">
+            <p class="user-name-navbar">Hello {{$ctrl.currentUserService.userName}}</p>
+
+            <a ng-click="$ctrl.logOut()">Log out</a>
+
+        </div>
+    </div>
+
+</div>
